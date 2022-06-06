@@ -18,7 +18,7 @@ class Solution
         for(long long i=0;i<n;i++)
         {
             long long re = A[i]%k;
-            if(re==0)   ans=ans+arr[0];
+            if(re==0)   ans=ans+arr[re];
            else ans=ans+arr[k-re];
             arr[re]++;
         }
