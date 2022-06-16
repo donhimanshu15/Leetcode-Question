@@ -19,18 +19,19 @@ class Solution{
         while(j<n)
         {
             mp2[str[j]]++;
-            if(mp1.size()==mp2.size())
-            {
+            
                 while(mp1.size()==mp2.size())
                 {
+                    ans=min(ans,j-i+1);
                     mp2[str[i]]--;
                     if(mp2[str[i]]==0)
                     mp2.erase(str[i]);
                     i++;
+                     
                 }
-                ans=min(ans,1+j-i+1);
-            }
-            j++;
+               
+            
+             j++;
         }
         return ans;
     
