@@ -2,7 +2,7 @@ class Solution {
 public:
   bool  equalSubset(int N, vector<int> &arr, vector<vector<int>> & dp, int sum){
     if(sum==0)return 1;
-    if(N<0&& sum!=0) return 0;
+    if(N<0) return 0;
     if(dp[N][sum]!=-1) return dp[N][sum];
     if(arr[N]>sum) return equalSubset(N-1,arr,dp,sum);
     return dp[N][sum]= equalSubset(N-1,arr,dp,sum)|| equalSubset(N-1,arr,dp,sum-arr[N]);
