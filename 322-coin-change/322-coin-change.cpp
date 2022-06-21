@@ -5,9 +5,9 @@ public:
       
         int f(int i,int amount,vector<int>& coins,vector<vector<int>>& dp){
       if(amount==0) return 0;
-        if(amount<0 || i<0) return 1e9;
+        if( i<0) return 1e9;
         if(dp[i][amount]!=-1) return dp[i][amount];
-        int notTake=0+f(i-1,amount,coins,dp);
+        int notTake=f(i-1,amount,coins,dp);
         int take=INT_MAX;
         if(coins[i]<=amount)  take=1+f(i,amount-coins[i],coins,dp);
         return dp[i][amount]=min(notTake,take);
