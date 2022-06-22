@@ -8,9 +8,10 @@ class Solution{
 	int mod=1000000007;
 	int dp[100001];
 	int solve(int n){
+	     if(n<=0) return 1;
 	    if(dp[n]!=-1) return dp[n];
-	    if(n==0) return 1;
-	    if(n==1) return 2;
+	   
+
 	    return dp[n]=solve(n-1)%mod+solve(n-2)%mod;
 	    
 	}
