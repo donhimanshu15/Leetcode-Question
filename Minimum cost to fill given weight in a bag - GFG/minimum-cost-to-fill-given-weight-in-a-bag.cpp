@@ -10,7 +10,7 @@ using namespace std;
 class Solution{
    public:
    int helper(int cost[],int n,int w,int i,vector<vector<int>> &dp){
-       if(i>=n && w==0)return 0;
+       if( w==0)return 0;
        if(i>=n)return 1e9;
        if(dp[i][w]!=-1)return dp[i][w];
        if(cost[i]==-1){
