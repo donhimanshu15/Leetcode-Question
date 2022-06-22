@@ -22,7 +22,7 @@ class Solution{
         
         int take=0;
         if(s[n1 - 1] == b[n2 - 1])
-       {  take+=solve(s,b, n1 - 1, n2 - 1)+solve(s,b, n1 - 1, n2);
+       {  take=solve(s,b, n1 - 1, n2 - 1)+solve(s,b, n1 - 1, n2);
        take%=mod;
        
        
