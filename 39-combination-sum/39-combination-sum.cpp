@@ -19,13 +19,14 @@ public:
             return;
         
        
-        solve(i + 1, arr, temp, target);
+       
         
         
         
         temp.push_back(arr[i]); 
         solve(i, arr, temp, target - arr[i]); 
         temp.pop_back(); 
+         solve(i + 1, arr, temp, target);
         
     }
     vector<vector<int>> combinationSum(vector<int>& arr, int target) {
