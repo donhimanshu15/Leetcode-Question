@@ -24,7 +24,7 @@ public:
                return s[i]=='F';
        }
        //checking in hashmap
-       string temp=to_string(i)+" "+to_string(j)+" "+to_string(isTrue);
+       string temp=to_string(i)+to_string(j)+to_string(isTrue);
        if(mp.find(temp)!= mp.end())
            return mp[temp];
        //looping
