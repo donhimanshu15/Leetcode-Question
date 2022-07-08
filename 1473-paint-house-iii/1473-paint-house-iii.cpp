@@ -7,7 +7,7 @@ public:
     int f(vector<int>& houses, vector<vector<int>>& cost, int target, int idx, int count, int prev){
         //base cases
         if(idx == houses.size()) return count==target ? 0 : mx;
-        if(idx > houses.size()) return mx;
+       
         
         //memoization
         if(dp[idx][count][prev]!=-1) return dp[idx][count][prev];
