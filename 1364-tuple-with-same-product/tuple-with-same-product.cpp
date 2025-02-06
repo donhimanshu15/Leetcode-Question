@@ -17,9 +17,9 @@ public:
         for (const auto &it: hm) {
             int count = it.second;
             if (count >= 2)
-                total += count * (count - 1) / 2;  // Choose 2 pairs from count pairs
+                total += count * (count - 1) ;  // Choose 2 pairs from count pairs
         }
         
-        return total * 8;  
+        return total * 4;  
     }
 };
